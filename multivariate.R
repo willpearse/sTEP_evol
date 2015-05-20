@@ -41,3 +41,5 @@ for(i in seq_len(ncol(t.data)))
 t.data <- na.omit(t.data)
 t.tree <- drop.tip(tree, setdiff(tree$tip.label, rownames(t.data)))
 model <- mvBM(t.tree, t.data)
+
+save.image("multivariate.RData")
